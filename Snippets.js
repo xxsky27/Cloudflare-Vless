@@ -162,7 +162,7 @@ async function 获取动态地址(输入参数) {
 }
 
 export default {
-  async fetch(来自外面的请求, env, ctx) {
+  async fetch(来自外面的请求) {
     const 握手头 = 来自外面的请求.headers.get('Upgrade');
     if (握手头 && 握手头.toLowerCase() === 'websocket') {
       const 网址 = new URL(来自外面的请求.url);
@@ -184,11 +184,7 @@ export default {
         if (提取路径IP) 候选地址 = decodeURIComponent(提取路径IP[1]);
       }
 
-      const 地址Promise = 获取动态地址(候选地址);
-      ctx.waitUntil(地址Promise);
-      let 当前备用地址;
-      try { 当前备用地址 = await 地址Promise; }
-      catch { 当前备用地址 = 默认备用小可爱地址; }
+      const 当前备用地址 = await 获取动态地址(候选地址);
       return 升级成小可爱通道(来自外面的请求.fetcher, 当前备用地址, 携带SS通行证, 早期数据);
     }
     return new Response('OK', { status: 200 });
