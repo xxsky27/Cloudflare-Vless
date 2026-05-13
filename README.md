@@ -1,7 +1,7 @@
 
  * Cloudflare Worker: Vless
  * 1. 推荐workers部署，没有特殊要求，只需更改UUID、落地IP，其它默认即可。
- * 2. 千兆带宽专用，专为大流量、高负载、巨型吞吐量设计。
+ * 2. 完全释放千兆带宽，专为大流量、高负载、巨型吞吐量设计。
  * 3. 无订阅、纯手搓。
  * 4. 客户端path写法,支持域名、txt、Ip，不支持SOCKS5，例如：/?ip=dsl253-007-079.nyc1.dsl.speakeasy.net  ;  /?ip=https://raw.githubusercontent.com/hofccyf/myip/refs/heads/main/us.txt  ;  /?ip=66.253.7.79   //建议更改成你自己的落地IP。
  * 5. Txt项目：https://github.com/hofccyf/MyTxt   (  来自：https://github.com/ethgan/Cloudflare_TextSpace_Worker )
