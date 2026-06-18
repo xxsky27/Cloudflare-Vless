@@ -1,7 +1,7 @@
 const gch = new TextDecoder('utf-8');
 const fai = new TextEncoder();
 const gpx = new TextDecoder();
-const qjj = '88888888-8888-8888-8888-888888888888';  //改成你自己的
+const qjj = 'ba72bd17-1de4-4b76-a26d-7e09e7f3af02';  //改成你自己的
 const gul = ((uuid) => {
   const hex = uuid.replace(/-/g, '');
   const arr = new Uint8Array(16);
@@ -9,7 +9,7 @@ const gul = ((uuid) => {
   return arr;
 })(qjj);
 const [SZ0, SZ1, SZ2, SZ3, SZ4, SZ5, SZ6, SZ7, SZ8, SZ9, SZ10, SZ11, SZ12, SZ13, SZ14, SZ15] = gul;
-const afq = 'dsl253-007-079.nyc1.dsl.speakeasy.net';  //兜底落地IP，建议改成你自己的
+const afq = 'ProxyIP.US.CMLiussss.net';  //兜底落地IP，建议改成你自己的
 const ipf       = 256 * 1024;
 const fxw       = 192 * 1024;
 const bgr       = 8;
